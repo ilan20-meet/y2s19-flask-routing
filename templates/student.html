@@ -6,5 +6,13 @@
 </head>
 <body>
     <h1>This is the page for the student with id {{ id_number }}.</h1>
+    <p> Student name: {{ student.name }} </p>
+    <p> Student year: {{ student.year }} </p>
+    {% if student.finished_lab == True %}
+	    <p> Lab status: Finished! </p>
+    {% else %}
+        <p> Lab status: Didn't finish yet... </p>
+    {% endif %}
+    <a href="{{ url_for('home') }}"> go back home </a>
 </body>
 </html>
